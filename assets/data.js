@@ -1,9 +1,9 @@
 const data = {
-    name: "Alexis Developer",
+    name: "Otro developer",
     address: "123 Main Street, New York, NY",
     email: "alexismamais@email.com",
     avatar:
-      "assets/5874ccdb42e4d628738559dc.png",
+      "https://global.tiffin.edu/img/article/cuanto-gana-un-desarrollador-de-software.webp",
     aboutMe:
       "I'm a passionate photographer, web developer, and journalist with a diverse educational background. I hold a Bachelor's degree in Science, a Web Development Certification, and a Master's in Journalism. My work experience includes capturing exclusive images as a photographer, developing web applications, and reporting on news stories. I'm committed to continuous learning and contributing to both the digital world and quality journalism.",
   
