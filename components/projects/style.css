@@ -1,0 +1,13 @@
+#projects-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+#projects-list>li{
+max-width: 22vw;
+}
+#projects-list>li>img{
+    max-width: 100%;
+}

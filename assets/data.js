@@ -1,5 +1,5 @@
 const data = {
-    name: "Otro developer",
+    name: "Pepe Hernestopepe",
     address: "123 Main Street, New York, NY",
     email: "alexismamais@email.com",
     avatar:

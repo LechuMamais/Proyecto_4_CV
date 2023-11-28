@@ -1,0 +1,12 @@
+#experience-list{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*#experience-list h3,
+#experience-list h4,
+#experience-list p
+{
+    text-align: left;
+}*/

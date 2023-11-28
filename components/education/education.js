@@ -3,14 +3,16 @@ import './style.css'
 
 export const education = document.createElement('section')
 education.id = 'education';
-education.classList = 'hidden'
+education.classList.add('hidden')
+education.classList.add('flex-main-section');
+
 education.innerHTML = `
     <h2>Education</h2>
     <h3>${data.education.degree}</h3>
     <h4>${data.education.university}</h4>
-    <p>${data.education.graduationYear}</p>
+    <spam>${data.education.graduationYear}</spam>
     <p>${data.education.honors}</p>
-    <h3>Relevant Courses</h3>
+    <h3>Relevant Courses:</h3>
     <ul id="relevant-courses">
     <!--Acá va un li por cada curso de data.education.relevantCourses-->
     </ul>

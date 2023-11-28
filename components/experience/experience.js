@@ -3,7 +3,8 @@ import './style.css'
 
 export const experience = document.createElement('section')
 experience.id = 'experience';
-experience.classList = 'hidden';
+experience.classList.add('hidden');
+experience.classList.add('flex-main-section');
 experience.innerHTML = `
     <h2>Experience</h2>
     <ul id="experience-list">

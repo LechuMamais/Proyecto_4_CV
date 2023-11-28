@@ -3,7 +3,8 @@ import './style.css'
 
 export const projects = document.createElement('section')
 projects.id = 'projects';
-projects.classList = 'hidden';
+projects.classList.add('hidden');
+projects.classList.add('flex-main-section');
 projects.innerHTML = `
     <h2>Projects</h2>
     <ul id="projects-list">

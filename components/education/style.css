@@ -1,0 +1,16 @@
+
+#relevant-courses{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#relevant-courses>li{
+    background-color: var(--color-yellow);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    transition: all var(--transition-timing-m);
+    cursor: pointer;
+}
