@@ -1,25 +1,34 @@
 header {
+    position: fixed;
     width: 20vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     box-shadow: var(--box-shadow-light);
+    background-color: var(--color-white);
 }
 
-header>#logo{
-    height: 28vh;
+header>#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 36vh;
     width: 100%;
 }
-header>#logo>img{
+
+header>#logo>img {
     display: block;
     margin: 0 auto;
-    max-height: 100%;   
-    max-width: 100%;
-    /*object-fit: cover;*/
-}   
-header h1{
-    margin-top: -10px;
+    width: 100%;
+    max-width: 242px;
+    object-fit: cover;
+}
+
+header h1 {
+    padding: 0 1rem;
+    max-height: 40%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.9rem;
     width: 100%;
     text-transform: uppercase;
     font-weight: 900;
@@ -34,11 +43,12 @@ header>nav>ul {
     padding: 0;
     margin: 0;
 }
-header>nav>ul>li{
-    height: 18vh;
+
+header>nav>ul>li {
+    height: 16vh;
 }
 
-header>nav>ul>li{
+header>nav>ul>li {
     text-align: center;
     margin: 0;
     /*border: 1px solid var(--color-dark);
@@ -49,17 +59,19 @@ header>nav>ul>li{
     display: flex;
     align-items: center;
 }
-header>nav>ul>li:hover{
+
+header>nav>ul>li:hover {
     background-color: var(--color-yellow);
 }
-header>nav>ul>li>a{
+
+header>nav>ul>li>a {
     width: 100%;
-    padding: 20% 0;
+    padding: 10% 0;
     font-size: 20px;
 }
 
 /*Esta class se va agregar al link activo*/
-.active_link{
+.active_link {
     background-color: var(--color-yellow);
     border: none;
 }
@@ -67,24 +79,120 @@ header>nav>ul>li>a{
 
 /*Animacion de la flechita con el click y hover*/
 
-.active_link::after{
+.active_link::after {
     content: '';
     background-color: var(--color-yellow);
     width: 30px;
     height: 30px;
     rotate: 45deg;
-    position: absolute;
-    left: 7vw;
+    position: relative;
+    left: -10.5vw;
     z-index: -1;
     animation: arrowAnimation 500ms ease 0s 1 normal forwards;
 }
 
 @keyframes arrowAnimation {
-	0% {
-		transform: translateX(0);
-	}
+    0% {
+        transform: translateX(0);
+    }
 
-	100% {
-		transform: translate(8vw,-8vw);
-	}
+    100% {
+        transform: translate(8vw, -8vw);
+    }
+}
+
+
+/*  ----------------------------------------------               MEDIAQUERYS             ------------------------------------------------*/
+
+
+@media (max-width: 1033px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 885px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Ya en 782px entran los mediaquerys del style.css general*/
+
+@media (max-width: 782px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+        width: 100vw;
+        z-index: 100;
+        gap: 1rem;
+
+        
+    }
+
+    header>#logo {
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+
+        align-items: center;
+        overflow: hidden;
+    }
+
+    header>#logo>h1 {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    header>#logo>img{
+        display: none;
+    }
+
+    header>nav{
+
+        height: 100%;
+    }
+
+    header>nav>ul {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    header>nav>ul>li {
+        min-width: 110px;
+        height: 100%;
+
+    }
+    header>nav>ul>li>a {
+        font-size: 1rem;
+    }
+    .active_link::after{
+        display: none;
+    }
+}
+
+
+@media (max-width: 696px) {
+    header{
+        height: 160px;
+    }
+    header>#logo{
+        flex-basis: 60vw;
+    }
+
+    header>nav{
+        flex-basis: 50vw;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    header>nav>ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    header>nav>ul>li{
+        max-height: 40px;
+        }
 }

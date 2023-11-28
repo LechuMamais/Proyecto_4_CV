@@ -1,12 +1,4 @@
-h2{
-    width: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 95px;
-    text-decoration: underline;
-    text-decoration-color: var(--color-yellow);
-    text-decoration-style: double ;
-}
+
 
 #skills-ul{
     display: flex;

@@ -7,6 +7,7 @@ import { experience } from './components/experience/experience';
 import { projects } from './components/projects/projects';
 import { footer } from './components/footer/footer';
 import { viewSelector } from './assets/viewSelector';
+import { reorder } from './assets/reorder'
 
 
 
@@ -100,8 +101,18 @@ for (let i = 0; i < data.projects.length; i++) {
   li.innerHTML = `
   <h3>${data.projects[i].title}</h3>
   <h4>${data.projects[i].description}</h4>
-  <a>${data.projects[i].link}</a>
+  <a href="${data.projects[i].link}">More...</a>
   <img class="project_img" src="${data.projects[i].preview}" alt="${data.projects[i].title}">
   `
   projectsList.append(li)
 }
+
+
+
+
+skillsUl.onclick = ()=>{
+  reorder(skillsUl);
+};
+coursesUl.onclick = ()=>{
+  reorder(coursesUl);
+};

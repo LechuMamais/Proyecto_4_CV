@@ -1,9 +1,9 @@
 const data = {
-    name: "Pepe Hernestopepe",
+    name: "Paquito Developer",
     address: "123 Main Street, New York, NY",
     email: "alexismamais@email.com",
     avatar:
-      "https://global.tiffin.edu/img/article/cuanto-gana-un-desarrollador-de-software.webp",
+      "https://previews.123rf.com/images/prettyvectors/prettyvectors1702/prettyvectors170200022/71079316-young-programmer-man-character-coding-vector-flat-cartoon-illustration.jpg",
     aboutMe:
       "I'm a passionate photographer, web developer, and journalist with a diverse educational background. I hold a Bachelor's degree in Science, a Web Development Certification, and a Master's in Journalism. My work experience includes capturing exclusive images as a photographer, developing web applications, and reporting on news stories. I'm committed to continuous learning and contributing to both the digital world and quality journalism.",
   
@@ -17,6 +17,8 @@ const data = {
         "Data Structures and Algorithms",
         "Database Design",
         "User Interface Design",
+        "Angular JS",
+        "React"
       ],
     },
     workExperience: [

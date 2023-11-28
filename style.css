@@ -10,66 +10,110 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-/*  COLORS*/
+  /*  COLORS*/
 
---color-yellow: #f5d845;
---color-yellow-white: #fff4be;
---color-white: white;
---color-dark: rgb(23, 22, 22);
+  --color-yellow: #f5d845;
+  --color-yellow-white: #fff4be;
+  --color-white: white;
+  --color-dark: rgb(23, 22, 22);
 
-/*  BOX SHADOW  */
+  /*  BOX SHADOW  */
 
---box-shadow-light: 10px 10px 30px -13px rgba(0,0,0,0.75);
+  --box-shadow-light: 10px 10px 30px -13px rgba(0, 0, 0, 0.75);
 
-/*  TRANSITION-TIMING  */
+  /*  TRANSITION-TIMING  */
 
---transition-timing-m: 460ms;
+  --transition-timing-m: 460ms;
 
 }
 
-*{
-  scroll-behavior: smooth;
+* {
   margin: 0;
   padding: 0;
   text-align: center;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
+
 }
 
-body{
+body {
   margin: 0;
   background-color: var(--color-white);
 }
 
-.hidden{
+.hidden {
   display: none !important;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--color-dark);
 }
 
-#app{
+#app {
   display: flex;
   flex-direction: row;
   color: var(--color-dark);
 }
 
-main{
+main {
+  min-height: 100vh;
   width: 80vw;
-  padding: 3rem;
+  padding: 0 3rem;
+  position: absolute;
+  right: 0px;
 }
 
-.flex-main-section{
-  height: 100%;
+.flex-main-section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+h2{
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 95px;
+  text-decoration: underline;
+  text-decoration-color: var(--color-yellow);
+  text-decoration-style: double ;
 }
 
 
-footer{
-  display:none;
+footer {
+  display: none;
+}
+
+/*Intento de Animación de reorder
+#relevant-courses,
+#skills-ul {
+  transition: all var(--transition-timing-m);
+}*/
+
+
+
+
+/*  ----------------------------------------------               MEDIAQUERYS             ------------------------------------------------*/
+
+@media (max-width: 782px) {
+  #app {
+    flex-direction: column;
+  }
+  main{
+    width: 100vw;
+    height: auto;
+    position:relative;
+    top: 150px;
+  }
+};
+
+@media (max-width: 696px){
+  h2{
+    font-size: 65px !important;
+  }
 }
