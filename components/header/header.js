@@ -5,7 +5,9 @@ import './style.css'
 export const header = document.createElement('header');
 header.innerHTML = `
     <div id="logo">
-      <img alt="${data.name}" src="${data.avatar}">
+      <div>
+        <img alt="${data.name}" src="${data.avatar}">
+      </div>
       <h1>${data.name}</h1>
     </div>
     

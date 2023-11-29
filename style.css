@@ -72,6 +72,7 @@ main {
   justify-content: space-evenly;
   box-sizing: border-box;
   min-height: 100vh;
+  gap: 2rem;
 }
 
 h2{
@@ -89,13 +90,6 @@ footer {
   display: none;
 }
 
-/*Intento de Animación de reorder
-#relevant-courses,
-#skills-ul {
-  transition: all var(--transition-timing-m);
-}*/
-
-
 
 
 /*  ----------------------------------------------               MEDIAQUERYS             ------------------------------------------------*/
@@ -107,13 +101,18 @@ footer {
   main{
     width: 100vw;
     height: auto;
+    padding: 0 2rem;
     position:relative;
     top: 150px;
   }
-};
 
-@media (max-width: 696px){
+}
+
+@media (max-width: 696px) {
   h2{
     font-size: 65px !important;
+  }
+  main{
+    padding: 0 1rem;
   }
 }
