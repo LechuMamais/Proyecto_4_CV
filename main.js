@@ -40,7 +40,7 @@ app.appendChild(footer);
 viewSelector('about_me');
 
 
-// Agregamos los escuchadores de Eventos de Footer
+// Agregamos los escuchadores de Eventos de Header
 const education_link = document.querySelector('#education_link');
 education_link.onclick = ()=> {
   viewSelector('education')
@@ -61,7 +61,17 @@ projects_link.onclick = ()=> {
   viewSelector('projects')
 }
 
-
+// Esto es para mostrar y ocultar el menu hamburguesa, version movil
+const menuHamburguesa = document.querySelector('#menu-hamburguesa');
+menuHamburguesa.addEventListener('click', () => {
+  console.log('has dado click al menu burguer');
+  let nav = document.querySelector('header>nav');
+  if(nav.style.display === 'none'){
+    nav.style.display = 'flex';
+  } else {
+    nav.style.display = 'none'
+  }
+})
 
 
 // Estos son todos los bucles que muestan la información contenida en data
@@ -101,7 +111,7 @@ for (let i = 0; i < data.projects.length; i++) {
   li.innerHTML = `
   <h3>${data.projects[i].title}</h3>
   <h4>${data.projects[i].description}</h4>
-  <a href="${data.projects[i].link}">More...</a>
+  <a href="${data.projects[i].link}" target="_blank">More...</a>
   <img class="project_img" src="${data.projects[i].preview}" alt="${data.projects[i].title}">
   `
   projectsList.append(li)

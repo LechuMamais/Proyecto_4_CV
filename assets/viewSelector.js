@@ -17,4 +17,12 @@ export const viewSelector = (selection) => {
     
     // Dejar el link pintado
     document.querySelector('#'+selection+'_link').parentElement.classList.add('active_link');
+
+    // Ocultar el menú en caso de que sea menu hamburguesa, en responsive
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    var nav = document.querySelector('header>nav');
+    if(viewportWidth<=696){
+        
+        nav.style.display = 'none'
+    }
 }

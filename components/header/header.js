@@ -28,4 +28,8 @@ header.innerHTML = `
       </ul>
     </nav>
 
+    <div id="menu-hamburguesa">
+      <img src="./assets/hamburguesa.png" alt="menu"></img>
+    </div>
+
 `
