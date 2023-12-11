@@ -12,4 +12,6 @@ about.innerHTML = `
     </ul>
     <p>${data.aboutMe}</p>
     <a href="mailto:${data.email}">Contact me</a>
+    <a href="${data.github}">Github</a>
+    <a href="${data.linkedin}">Linkedin</a>
 `

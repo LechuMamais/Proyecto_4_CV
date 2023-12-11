@@ -2,6 +2,8 @@ const data = {
     name: "Paquito Developer",
     address: "123 Main Street, New York, NY",
     email: "alexismamais@email.com",
+    github: "https://github.com/LechuMamais",
+    linkedin: "https://ar.linkedin.com/in/alexis-mamais-mazzucco-b9ab781ab",
     avatar:
       "https://previews.123rf.com/images/prettyvectors/prettyvectors1702/prettyvectors170200022/71079316-young-programmer-man-character-coding-vector-flat-cartoon-illustration.jpg",
     aboutMe:

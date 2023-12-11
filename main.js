@@ -8,6 +8,8 @@ import { projects } from './components/projects/projects';
 import { footer } from './components/footer/footer';
 import { viewSelector } from './assets/viewSelector';
 import { reorder } from './assets/reorder'
+import { showProject } from './assets/showProject';
+import { searchWordInObject } from './assets/searchWordInObject';
 
 
 
@@ -42,22 +44,22 @@ viewSelector('about_me');
 
 // Agregamos los escuchadores de Eventos de Header
 const education_link = document.querySelector('#education_link');
-education_link.onclick = ()=> {
+education_link.onclick = () => {
   viewSelector('education')
 }
 
 const about_me_link = document.querySelector('#about_me_link');
-about_me_link.onclick = ()=> {
+about_me_link.onclick = () => {
   viewSelector('about_me')
 }
 
 const experience_link = document.querySelector('#experience_link');
-experience_link.onclick = ()=> {
+experience_link.onclick = () => {
   viewSelector('experience')
 }
 
 const projects_link = document.querySelector('#projects_link');
-projects_link.onclick = ()=> {
+projects_link.onclick = () => {
   viewSelector('projects')
 }
 
@@ -66,7 +68,7 @@ const menuHamburguesa = document.querySelector('#menu-hamburguesa');
 menuHamburguesa.addEventListener('click', () => {
   console.log('has dado click al menu burguer');
   let nav = document.querySelector('header>nav');
-  if(nav.style.display === 'none'){
+  if (nav.style.display === 'none') {
     nav.style.display = 'flex';
   } else {
     nav.style.display = 'none'
@@ -105,24 +107,40 @@ for (let i = 0; i < data.workExperience.length; i++) {
   experienceUl.append(li)
 }
 
-const projectsList = document.querySelector('#projects-list');
+
+// Para los proyectos, la función está definida en assets
 for (let i = 0; i < data.projects.length; i++) {
-  let li = document.createElement('li');
-  li.innerHTML = `
-  <h3>${data.projects[i].title}</h3>
-  <h4>${data.projects[i].description}</h4>
-  <a href="${data.projects[i].link}" target="_blank">More...</a>
-  <img class="project_img" src="${data.projects[i].preview}" alt="${data.projects[i].title}">
-  `
-  projectsList.append(li)
+  showProject(i)
 }
 
 
 
+// Barra de BUSQUEDA DE PROYECTOS -----------
+let search = document.querySelector('#search_projects');
 
-skillsUl.onclick = ()=>{
+var input = document.createElement('input');
+input.type = 'text';
+input.name = 'search';
+input.id = 'search';
+input.placeholder = '🔎 Buscar';
+
+//    ---------------         CAPTURAR EL VALOR DE INPUT              -------------------  //
+input.onkeydown = (event) => {
+
+  if (event.key.length === 1) {   // Si la tecla presionada es una letra
+    console.log(input.value + event.key);
+    searchWordInObject(data.projects, input.value + event.key) // Donde buscar, palabra clave
+  }else{
+    console.log(input.value);
+    searchWordInObject(data.projects, input.value) // Si la ultima tecla no es una letra, que busque sólo lo que hay en el input
+  }
+}
+search.appendChild(input);
+
+
+skillsUl.onclick = () => {
   reorder(skillsUl);
 };
-coursesUl.onclick = ()=>{
+coursesUl.onclick = () => {
   reorder(coursesUl);
 };

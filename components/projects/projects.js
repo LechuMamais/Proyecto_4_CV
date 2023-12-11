@@ -7,6 +7,7 @@ projects.classList.add('hidden');
 projects.classList.add('flex-main-section');
 projects.innerHTML = `
     <h2>Projects</h2>
+    <div id="search_projects"></div>
     <ul id="projects-list">
         <!--Acá va un li por cada proyecto-->
     </ul>

@@ -198,6 +198,10 @@ header>nav>ul>li>a {
         justify-content: space-between;
     }
 
+    header>#logo>h1 {
+        font-size: 1rem;
+    }
+
     #menu-hamburguesa{
         display: block;
     }
