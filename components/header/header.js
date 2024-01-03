@@ -29,7 +29,7 @@ header.innerHTML = `
     </nav>
 
     <div id="menu-hamburguesa">
-      <img src="../../public/hamburguesa.png" alt="menu"></img>
+      <img src="/hamburguesa.png" alt="menu"></img>
     </div>
 
 `
